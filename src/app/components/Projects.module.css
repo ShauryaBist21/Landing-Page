@@ -1,0 +1,53 @@
+.projectsSection {
+    background-color: #ffffff; /* White background for the section */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.25rem; /* Same size as services title */
+    font-weight: bold;
+    color: #333; /* Dark text */
+    margin-bottom: 2rem;
+}
+
+.projectGrid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+}
+
+.projectCard {
+    background-color: #fff; /* Card background */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow */
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projectCard:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+}
+
+.projectTitle {
+    font-size: 1.75rem; /* Same as service card title */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333; /* Dark text */
+}
+
+.projectDescription {
+    font-size: 1.125rem; /* Same as service description */
+    color: #666; /* Gray color */
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.projectCountry {
+    font-size: 1rem; /* Smaller font for country */
+    font-weight: bold;
+    color: #444; /* Slightly darker gray */
+    margin-top: 0.5rem;
+}

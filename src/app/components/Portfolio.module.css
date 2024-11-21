@@ -1,0 +1,62 @@
+/* Portfolio Section Styles */
+.portfolioSection {
+    background-color: white;
+    color: black;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .mainHeading {
+    font-size: 2.25rem; /* Same as .title in services.css */
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 2rem;
+  }
+  
+  .tabContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid #e0e0e0; /* Divider under tabs */
+  }
+  
+  .tab {
+    font-size: 1.25rem; /* Font size for tabs */
+    font-weight: bold;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid transparent; /* Active state indicator */
+  }
+  
+  .tab:hover,
+  .tab.active {
+    color: #333;
+    border-bottom: 3px solid #333; /* Highlight active tab */
+  }
+  
+  .sectionContent {
+    display: none; /* Initially hide all sections */
+  }
+  
+  .sectionContent.active {
+    display: block; /* Show active section */
+    text-align: left; /* Align content to the left */
+  }
+  
+  .sectionHeading {
+    font-size: 1.75rem; /* Same as .serviceTitle in services.css */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: black;
+  }
+  
+  .description {
+    font-size: 1.125rem; /* Same as .serviceDescription in services.css */
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  

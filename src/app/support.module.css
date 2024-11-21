@@ -1,0 +1,57 @@
+.supportSection {
+    background-color: #ffffff; /* White background */
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.25rem; /* 36px */
+    font-weight: bold;
+    color: #333; /* Dark text for visibility */
+    margin-bottom: 2rem;
+  }
+  
+  .supportGrid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  }
+  
+  .supportBox {
+    background-color: #f8f8f8; /* Light gray background */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .supportBox:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+  }
+  
+  .clientName {
+    font-size: 1.25rem; /* 20px */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .clientCompany {
+    font-size: 1rem; /* 16px */
+    font-weight: normal;
+    color: #666; /* Lighter gray text for company name */
+    margin-bottom: 1rem;
+  }
+  
+  .clientTestimonial {
+    font-size: 1rem; /* 16px */
+    font-style: italic;
+    color: #555; /* Dark gray text for the testimonial */
+    text-align: center;
+  }
+  

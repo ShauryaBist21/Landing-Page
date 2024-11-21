@@ -1,0 +1,45 @@
+.differentiatorsSection {
+    background-color: #ffffff; /* White background */
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 2.25rem; /* 36px */
+    font-weight: bold;
+    color: #333; /* Dark text for visibility */
+    margin-bottom: 2rem;
+  }
+  
+  .differentiatorGrid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  }
+  
+  .differentiatorCard {
+    background-color: #fff; /* White card background */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for card */
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .differentiatorCard:hover {
+    transform: translateY(-10px); /* Slight lift effect on hover */
+  }
+  
+  .differentiatorTitle {
+    font-size: 1.75rem; /* 28px */
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .differentiatorDescription {
+    font-size: 1.125rem; /* 18px */
+    color: #666; /* Dark gray color for description */
+    line-height: 1.6;
+  }
+  

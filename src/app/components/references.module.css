@@ -1,0 +1,60 @@
+/* reference.module.css */
+.reference {
+    background-color: black;
+    color: white;
+    padding: 6rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 960px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    color: white;
+  }
+  
+  .subheading {
+    margin-top: 1.5rem;
+    color: white;
+    font-size: 1.125rem;
+  }
+  
+  .subheading h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subheading p {
+    margin: 0.5rem 0;
+  }
+  
+  .buttonContainer {
+    margin-top: 2rem;
+  }
+  
+  .contactUsButton {
+    background-color: white;
+    color: black;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid #4a5568;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contactUsButton:hover {
+    background-color: #edf2f7;
+    color: #2d3748;
+  }
+  

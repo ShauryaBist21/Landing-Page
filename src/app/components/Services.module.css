@@ -1,0 +1,45 @@
+/* components/Services.module.css */
+.servicesSection {
+    background-color: #ffffff; 
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.25rem; 
+    font-weight: bold;
+    color: #333; 
+    margin-bottom: 2rem;
+}
+
+.serviceGrid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+}
+
+.serviceCard {
+    background-color: #fff; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.serviceCard:hover {
+    transform: translateY(-10px); 
+}
+
+.serviceTitle {
+    font-size: 1.75rem; 
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.serviceDescription {
+    font-size: 1.125rem; 
+    color: #666; 
+    line-height: 1.6;
+}
