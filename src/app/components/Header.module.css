@@ -1,25 +1,29 @@
-/* components/Header.module.css */
 .header {
     background-color: hsl(var(--primary));
     color: white;
-    padding: 10rem 10rem;
+    padding: 8rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center; 
+    text-align: center;
 }
 
 .container {
     max-width: 960px;
-    width: 100%; /* Ensure the container takes full width on smaller screens */
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
-    font-size: 1.875rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: -0.02em;
     color: #ffff;
+    margin-bottom: 1rem;
 }
 
 .description {
@@ -27,6 +31,8 @@
     color: #b3b3b3;
     max-width: 700px;
     font-size: 1.125rem;
+    line-height: 1.5;
+    text-align: center;
 }
 
 .buttonContainer {
@@ -37,8 +43,8 @@
 }
 
 .learnMoreButton {
-    background-color: #e2e8f0;
-    color: #1a202c; 
+    background-color: #e2e8f0; /* Light grey background */
+    color: #1a202c; /* Dark text */
     padding: 0.625rem 1rem;
     border-radius: 0.25rem;
     text-decoration: none;
@@ -48,14 +54,14 @@
 }
 
 .learnMoreButton:hover {
-    background-color: #cbd5e0;
+    background-color: #cbd5e0; /* Slightly darker grey on hover */
 }
 
 .contactUsButton {
-    background-color: white;
-    color: black;
+    background-color: white; /* White background */
+    color: black; /* Black text */
     padding: 0.625rem 1rem;
-    border: 1px solid #4a5568; 
+    border: 1px solid #4a5568; /* Border color */
     border-radius: 0.25rem;
     text-decoration: none;
     font-size: 0.875rem;
@@ -64,47 +70,6 @@
 }
 
 .contactUsButton:hover {
-    background-color: #edf2f7; 
-    color: #2d3748; 
-}
-
-/* Responsive Styles - Mobile & Tablet */
-@media screen and (max-width: 768px) {
-    .header {
-        padding: 6rem 4rem; /* Reduce padding on smaller screens */
-    }
-
-    .title {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-    }
-
-    .description {
-        font-size: 1rem; /* Adjust description font size */
-        max-width: 90%; /* Make sure it doesn't stretch too wide on mobile */
-    }
-
-    .buttonContainer {
-        flex-direction: column; /* Stack the buttons vertically on mobile */
-        gap: 0.75rem; /* Add space between the buttons */
-    }
-
-    .learnMoreButton, .contactUsButton {
-        font-size: 1rem; /* Increase button text size for easier interaction on mobile */
-        padding: 0.75rem 1.25rem; /* Adjust button padding */
-    }
-}
-
-/* Further adjustment for smaller mobile screens */
-@media screen and (max-width: 480px) {
-    .title {
-        font-size: 1.25rem; /* Slightly reduce title font size on very small screens */
-    }
-
-    .description {
-        font-size: 0.95rem; /* Slightly reduce font size for smaller devices */
-    }
-
-    .buttonContainer {
-        gap: 1rem; /* Increase the gap between buttons for very small screens */
-    }
+    background-color: #edf2f7; /* Light grey background on hover */
+    color: #2d3748; /* Dark grey text on hover */
 }

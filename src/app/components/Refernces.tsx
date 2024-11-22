@@ -6,7 +6,7 @@ const Reference: React.FC = () => {
   return (
     <div className={styles.Reference}>
       <div className={styles.container}>
-        <h1 className={styles.title}>Let&apos;s Connect to Co-Create Value</h1>
+        <h1 className={styles.title}>Let's Connect to Co-Create Value</h1>
         <div className={styles.subheading}>
           <h2>A Bayantiz Technologies AI Venture</h2>
           <p>715 Duong so 9, Phuong Thao Dien, Thanh pho Thu Duc</p>

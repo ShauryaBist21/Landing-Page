@@ -50,11 +50,11 @@ const Portfolio: React.FC = () => {
       case "digitalMarketing":
         return (
           <div className={`${styles.sectionContent} ${styles.active}`}>
-            <h2 className={styles.sectionHeading}>Zenotail™</h2>
+            <h2 className={styles.sectionHeading}>DigiZen™</h2>
             <p className={styles.description}>
-              AI-Powered Retail Analytics
+              AI-powered Digital Marketing platform
               <br />
-              Customer Behavior Analytics, Visual Search, Product Recommendations, and AI-Powered Chatbots for enhanced retail operations.
+              Designed to enhance targeting, personalization, automation, and analysis in digital marketing campaigns.
             </p>
           </div>
         );

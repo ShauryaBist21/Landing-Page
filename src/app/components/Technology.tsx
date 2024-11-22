@@ -11,9 +11,9 @@ const Technology: React.FC = () => {
           .fill(null)
           .map((_, index) => (
             <div key={index} className={styles.technologyBox}>
-              {/* Leave space blank or add a simple placeholder */}
+              {/* Placeholder content */}
               <div className={styles.technologyImagePlaceholder}>
-                {/* You can later replace this with an <img> tag once you have the images */}
+                {/* Later replace with <img> */}
               </div>
             </div>
           ))}

@@ -14,7 +14,7 @@
 .projectGrid {
     display: grid;
     gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 boxes in the first row */
 }
 
 .projectCard {

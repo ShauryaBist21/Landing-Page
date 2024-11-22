@@ -12,9 +12,13 @@
 }
 
 .supportGrid {
-    display: grid;
+    display: flex;
+    justify-content: center; /* Centers the grid horizontally */
+    align-items: center; /* Centers the grid vertically */
     gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    max-width: 1200px; /* Set a max-width to limit the grid width */
+    margin: 0 auto; /* Centers the grid inside the container */
 }
 
 .supportBox {
@@ -28,6 +32,7 @@
     align-items: center;
     height: auto;
     transition: transform 0.3s ease-in-out;
+    width: 300px; /* Fixed width for consistency */
 }
 
 .supportBox:hover {

@@ -4,12 +4,16 @@
     color: black;
     padding: 4rem 2rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content horizontally */
+    justify-content: center; /* Ensure content is centered vertically */
 }
 
 .mainHeading {
-    font-size: 2.25rem; /* Same as .title in services.css */
+    font-size: 2.25rem; 
     font-weight: bold;
-    color: #333; 
+    color: #333;
     margin-bottom: 2rem;
 }
 
@@ -17,82 +21,84 @@
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
-    border-bottom: 2px solid #e0e0e0; /* Divider under tabs */
-    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+    border-bottom: 2px solid #e0e0e0;
+    flex-wrap: wrap;
 }
 
 .tab {
-    font-size: 1.25rem; /* Font size for tabs */
+    font-size: 1.25rem;
     font-weight: bold;
     margin: 0 1rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
     color: #666;
     transition: color 0.3s, border-bottom 0.3s;
-    border-bottom: 3px solid transparent; /* Active state indicator */
+    border-bottom: 3px solid transparent;
 }
 
 .tab:hover,
 .tab.active {
     color: #333;
-    border-bottom: 3px solid #333; /* Highlight active tab */
+    border-bottom: 3px solid #333;
 }
 
 .sectionContent {
-    display: none; /* Initially hide all sections */
+    display: none;
+    text-align: center; /* Align text to the center for better readability */
+    margin-top: 2rem;
+    max-width: 800px; /* Ensure content doesn't stretch too wide */
+    width: 100%; /* Ensures responsiveness */
 }
 
 .sectionContent.active {
-    display: block; /* Show active section */
-    text-align: left; /* Align content to the left */
+    display: block;
 }
 
 .sectionHeading {
-    font-size: 1.75rem; /* Same as .serviceTitle in services.css */
+    font-size: 1.75rem; 
     font-weight: bold;
     margin-bottom: 1rem;
     color: black;
 }
 
 .description {
-    font-size: 1.125rem; /* Same as .serviceDescription in services.css */
+    font-size: 1.125rem; 
     color: #666;
     line-height: 1.6;
     margin-bottom: 2rem;
 }
 
-/* Responsive Styles for Mobile and Tablet */
+/* Responsive Styles */
 @media screen and (max-width: 768px) {
     .mainHeading {
-        font-size: 1.75rem; /* Reduce heading size on tablets */
+        font-size: 1.75rem;
     }
 
     .tabContainer {
-        flex-direction: column; /* Stack tabs vertically on smaller screens */
+        flex-direction: column;
     }
 
     .tab {
-        font-size: 1.1rem; /* Slightly smaller font size for tabs on tablets */
-        margin: 0.5rem 0; /* Adjust spacing for vertical tabs */
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
     }
 
     .description {
-        font-size: 1rem; /* Adjust font size for description on tablets */
+        font-size: 1rem;
     }
 }
 
-/* Further adjustment for very small screens */
 @media screen and (max-width: 480px) {
     .mainHeading {
-        font-size: 1.5rem; /* Smaller font size for small screens */
+        font-size: 1.5rem;
     }
 
     .tab {
-        font-size: 1rem; /* Make tabs smaller on small screens */
-        padding: 0.5rem 0.8rem; /* Adjust padding for smaller screens */
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
     }
 
     .description {
-        font-size: 0.95rem; /* Slightly reduce font size for small mobile screens */
+        font-size: 0.95rem;
     }
 }
