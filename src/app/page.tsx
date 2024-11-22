@@ -1,22 +1,22 @@
+
 import NavBar from './components/NAVBAR';
-import Header from './components/Header';
-import AboutUs from './components/AboutUs';
+import AboutUs from './components/About';
 import Services from './components/Services';
+import Header from './components/Header';
 import Portfolio from './components/Portfolio';
 import Projects from './components/Projects';
-import Differentiators from './Diffrentiator';
-import Technology from './Technology';
-import Support from './support';
-import Reference from './components/references';
-import Footer from './components/footer';
-
+import Differentiators from './components/Differentiators';
+import Technology from './components/Technology';
+import Support from './components/Support';
+import Reference from './components/Refernces'
+import Footer from './components/Footer';
 export default function HomePage() {
     return (
         <div>
             <NavBar />
-            <Header />
-            <AboutUs />
-            <Services />
+            <Header/>
+            <AboutUs/>
+            <Services/>
             <Portfolio/>
             <Projects/>
             <Differentiators/>
@@ -24,6 +24,8 @@ export default function HomePage() {
             <Support/>
             <Reference/>
             <Footer/>
+    
+
         </div>
     );
 }

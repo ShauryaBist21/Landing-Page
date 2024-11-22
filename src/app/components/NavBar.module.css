@@ -1,35 +1,77 @@
-
 .navbar {
-    
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 10px 20px;  /* Reduced padding to make space */
     border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%;
+    box-sizing: border-box; /* Prevents navbar from stretching beyond its container */
+    position: relative; /* Ensure it's positioned relative to other components */
+    z-index: 10; /* Keeps navbar above other content */
 }
 
 .navbar ul {
-    background-color:  #f0f0f0;
     list-style-type: none;
-    margin-left: 0px;
-    padding-left: 15px;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: left;
+    gap: 15px; /* Default gap between items */
+    align-items: center;
+    width: auto; /* Allow the width to adjust dynamically */
 }
 
 .navbar li {
-
-    background-color:  #f0f0f0;
-
-    margin-right: 20px;
+    margin: 0;
+    padding: 5px 10px;
 }
 
 .navbar a {
-    background-color:  #f0f0f0;
-    
     text-decoration: none;
-   
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 10px;
 }
-.navbar a:hover{
-    color:grey;
+
+/* On hover, change color */
+.navbar a:hover {
+    color: grey;
     transition: color 0.3s ease-in-out;
 }
 
+/* Responsive Styles - Adjust the navbar for smaller screens */
+@media screen and (max-width: 1024px) {
+    .navbar ul {
+        gap: 10px; /* Reduce the gap slightly */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Slightly smaller font size */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        gap: 8px;  /* Further reduce gap */
+    }
+
+    .navbar a {
+        font-size: 13px; /* Keep the font size consistent */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 10px; /* Reduce padding on small screens */
+    }
+
+    .navbar ul {
+        gap: 5px; /* Keep a minimal gap between items */
+    }
+
+    .navbar a {
+        font-size: 12px; /* Decrease font size for small screens */
+    }
+}

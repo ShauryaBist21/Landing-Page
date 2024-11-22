@@ -1,45 +1,107 @@
 /* components/Services.module.css */
+
 .servicesSection {
-    background-color: #ffffff; 
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
     padding: 4rem 2rem;
     text-align: center;
+    color: #fff; /* White text */
 }
 
 .title {
-    font-size: 2.25rem; 
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
+    font-size: 2.25rem;
     font-weight: bold;
-    color: #333; 
+    color: black;
     margin-bottom: 2rem;
 }
 
 .serviceGrid {
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
     display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
 }
 
+/* Each service card */
 .serviceCard {
-    background-color: #fff; 
-    border: 1px solid #e0e0e0; 
-    border-radius: 0.5rem; 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-    padding: 1.5rem;
-    text-align: center;
+    background-color: white;
+    border: 1px solid #444; /* Darker border */
+    border-radius: 0.5rem;
+    padding: 2rem;
     transition: transform 0.3s ease-in-out;
 }
 
 .serviceCard:hover {
-    transform: translateY(-10px); 
+    transform: translateY(-10px);
 }
 
 .serviceTitle {
-    font-size: 1.75rem; 
+    color: black;
+    background-color: white;
+    font-size: 1.75rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
 .serviceDescription {
-    font-size: 1.125rem; 
-    color: #666; 
+    color: black;
+    background-color: white;
+    font-size: 1.125rem;
     line-height: 1.6;
+}
+
+/* Responsive Styles for Tablets and Mobile */
+
+@media screen and (max-width: 1024px) {
+    /* Adjust the service grid for tablets */
+    .serviceGrid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+
+    .title {
+        font-size: 2rem; /* Reduce title size for tablets */
+    }
+
+    .serviceTitle {
+        font-size: 1.5rem; /* Smaller service title font size */
+    }
+
+    .serviceDescription {
+        font-size: 1rem; /* Smaller description font size */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust the service grid for mobile screens */
+    .serviceGrid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+        gap: 1.5rem; /* Reduce gap between items */
+    }
+
+    .title {
+        font-size: 1.75rem; /* Slightly smaller title for mobile */
+    }
+
+    .serviceTitle {
+        font-size: 1.25rem; /* Slightly smaller title for mobile */
+    }
+
+    .serviceDescription {
+        font-size: 0.95rem; /* Reduce description font size for mobile */
+    }
+}
+
+/* Further adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    .serviceCard {
+        padding: 1.5rem; /* Reduce padding for very small screens */
+    }
+
+    .serviceTitle {
+        font-size: 1.25rem; /* Smaller service title font size */
+    }
+
+    .serviceDescription {
+        font-size: 0.9rem; /* Reduce description font size */
+    }
 }

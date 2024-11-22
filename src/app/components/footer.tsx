@@ -1,10 +1,10 @@
 // components/Footer.tsx
 import React from 'react';
-import styles from './footer.module.css';
+import styles from './Footer.module.css'
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.Footer}>
       <div className={styles.left}>
         © 2024 Zenoheal. All rights reserved.
       </div>

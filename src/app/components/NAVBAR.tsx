@@ -1,4 +1,3 @@
-// components/NavBar.tsx
 import Link from 'next/link';
 import styles from './NavBar.module.css';
 
@@ -24,7 +23,6 @@ const NavBar = () => {
                     </li>
                 </ul>
             </div>
-           
         </nav>
     );
 };

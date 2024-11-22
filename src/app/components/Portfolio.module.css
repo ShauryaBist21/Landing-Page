@@ -4,23 +4,24 @@
     color: black;
     padding: 4rem 2rem;
     text-align: center;
-  }
-  
-  .mainHeading {
+}
+
+.mainHeading {
     font-size: 2.25rem; /* Same as .title in services.css */
     font-weight: bold;
     color: #333; 
     margin-bottom: 2rem;
-  }
-  
-  .tabContainer {
+}
+
+.tabContainer {
     display: flex;
     justify-content: center;
     margin-bottom: 2rem;
     border-bottom: 2px solid #e0e0e0; /* Divider under tabs */
-  }
-  
-  .tab {
+    flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+}
+
+.tab {
     font-size: 1.25rem; /* Font size for tabs */
     font-weight: bold;
     margin: 0 1rem;
@@ -29,34 +30,69 @@
     color: #666;
     transition: color 0.3s, border-bottom 0.3s;
     border-bottom: 3px solid transparent; /* Active state indicator */
-  }
-  
-  .tab:hover,
-  .tab.active {
+}
+
+.tab:hover,
+.tab.active {
     color: #333;
     border-bottom: 3px solid #333; /* Highlight active tab */
-  }
-  
-  .sectionContent {
+}
+
+.sectionContent {
     display: none; /* Initially hide all sections */
-  }
-  
-  .sectionContent.active {
+}
+
+.sectionContent.active {
     display: block; /* Show active section */
     text-align: left; /* Align content to the left */
-  }
-  
-  .sectionHeading {
+}
+
+.sectionHeading {
     font-size: 1.75rem; /* Same as .serviceTitle in services.css */
     font-weight: bold;
     margin-bottom: 1rem;
     color: black;
-  }
-  
-  .description {
+}
+
+.description {
     font-size: 1.125rem; /* Same as .serviceDescription in services.css */
     color: #666;
     line-height: 1.6;
     margin-bottom: 2rem;
-  }
-  
+}
+
+/* Responsive Styles for Mobile and Tablet */
+@media screen and (max-width: 768px) {
+    .mainHeading {
+        font-size: 1.75rem; /* Reduce heading size on tablets */
+    }
+
+    .tabContainer {
+        flex-direction: column; /* Stack tabs vertically on smaller screens */
+    }
+
+    .tab {
+        font-size: 1.1rem; /* Slightly smaller font size for tabs on tablets */
+        margin: 0.5rem 0; /* Adjust spacing for vertical tabs */
+    }
+
+    .description {
+        font-size: 1rem; /* Adjust font size for description on tablets */
+    }
+}
+
+/* Further adjustment for very small screens */
+@media screen and (max-width: 480px) {
+    .mainHeading {
+        font-size: 1.5rem; /* Smaller font size for small screens */
+    }
+
+    .tab {
+        font-size: 1rem; /* Make tabs smaller on small screens */
+        padding: 0.5rem 0.8rem; /* Adjust padding for smaller screens */
+    }
+
+    .description {
+        font-size: 0.95rem; /* Slightly reduce font size for small mobile screens */
+    }
+}
