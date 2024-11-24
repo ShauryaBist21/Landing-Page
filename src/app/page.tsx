@@ -9,7 +9,7 @@ import Differentiators from './components/Differentiators';
 import Technology from './components/Technology';
 import Support from './components/Support';
 import Reference from './components/Refernces'
-import Footer from './components/Footer';
+import footer from './components/footer';
 export default function HomePage() {
     return (
         <div>
@@ -23,7 +23,7 @@ export default function HomePage() {
             <Technology/>
             <Support/>
             <Reference/>
-            <Footer/>
+            <footer/>
     
 
         </div>
