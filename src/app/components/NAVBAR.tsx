@@ -1,30 +1,23 @@
-import Link from 'next/link';
+import React from 'react';
 import styles from './NavBar.module.css';
 
-const NavBar = () => {
-    return (
-        <nav className={styles.navbar}>
-            <div>
-                <ul className={styles.unorderlist}>
-                    <li className={styles.list}>
-                        <Link className='lnk' href="/">Zenoheal</Link>
-                    </li>
-                    <li className={styles.list}>
-                        <Link className='lnk' href="/">About</Link>
-                    </li >
-                    <li>
-                        <Link className='lnk'  href="/about">Services</Link>
-                    </li> 
-                    <li className={styles.list}>
-                        <Link className='lnk' href="/contact">Products</Link>
-                    </li>
-                    <li className={styles.list}> 
-                        <Link className='lnk' href="/">Contact</Link>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    );
+const NavBar: React.FC = () => {
+  return (
+    <nav className={styles.navbar}>
+      <div className={styles.logo}>
+        <span>&#x27A4;</span> {/* Placeholder logo (Arrow symbol) */}
+      </div>
+      <ul className={styles.navLinks}>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+      </ul>
+      <div className={styles.contactUs}>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </nav>
+  );
 };
 
 export default NavBar;

@@ -1,31 +1,17 @@
 
 import NavBar from './components/NAVBAR';
-import AboutUs from './components/About';
-import Services from './components/Services';
-import Header from './components/Header';
-import Portfolio from './components/Portfolio';
-import Projects from './components/Projects';
-import Differentiators from './components/Differentiators';
-import Technology from './components/Technology';
-import Support from './components/Support';
-import Reference from './components/Refernces'
+import Hero from './components/Hero';
+import Frame from './components/Frame';
 import Footer from './components/Footer';
+import Testimonial from './components/Testimonial';
 export default function HomePage() {
     return (
         <div>
             <NavBar />
-            <Header/>
-            <AboutUs/>
-            <Services/>
-            <Portfolio/>
-            <Projects/>
-            <Differentiators/>
-            <Technology/>
-            <Support/>
-            <Reference/>
+            <Hero/>
+            <Frame/>
+            <Testimonial/>
             <Footer/>
-    
-
         </div>
     );
 }

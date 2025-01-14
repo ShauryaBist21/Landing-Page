@@ -1,77 +1,48 @@
 .navbar {
-    background-color: #f0f0f0;
-    padding: 10px 20px;  /* Reduced padding to make space */
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    width: 100%;
-    box-sizing: border-box; /* Prevents navbar from stretching beyond its container */
-    position: relative; /* Ensure it's positioned relative to other components */
-    z-index: 10; /* Keeps navbar above other content */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Changed to full width */
+  height: 56px;
+  padding: 0 1rem;
+  background-color: hsl(0, 0%, 50%); /* Adjust to match your gray */
+  border-radius: 30px; /* Rounded corners */
+  box-sizing: border-box;
 }
 
-.navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px; /* Default gap between items */
-    align-items: center;
-    width: auto; /* Allow the width to adjust dynamically */
+.logo {
+  font-size: 2rem;
+  color: #6e38f5; /* Purple color for the logo */
 }
 
-.navbar li {
-    margin: 0;
-    padding: 5px 10px;
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 5px 10px;
+.navLinks li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
 }
 
-/* On hover, change color */
-.navbar a:hover {
-    color: grey;
-    transition: color 0.3s ease-in-out;
+.navLinks li a:hover {
+  opacity: 0.8;
 }
 
-/* Responsive Styles - Adjust the navbar for smaller screens */
-@media screen and (max-width: 1024px) {
-    .navbar ul {
-        gap: 10px; /* Reduce the gap slightly */
-    }
-
-    .navbar a {
-        font-size: 14px; /* Slightly smaller font size */
-    }
+.contactUs a {
+  padding: 0.5rem 1.5rem;
+  background-color: #9c47ff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-    .navbar ul {
-        gap: 8px;  /* Further reduce gap */
-    }
-
-    .navbar a {
-        font-size: 13px; /* Keep the font size consistent */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .navbar {
-        padding: 10px; /* Reduce padding on small screens */
-    }
-
-    .navbar ul {
-        gap: 5px; /* Keep a minimal gap between items */
-    }
-
-    .navbar a {
-        font-size: 12px; /* Decrease font size for small screens */
-    }
+.contactUs a:hover {
+  background-color: #6e38f5;
 }
