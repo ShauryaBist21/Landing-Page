@@ -1,57 +1,82 @@
-.footerContainer {
-  width: 100%; /* Changed to full width */
-  height: 479px;
-  padding: 50px;
-  background-color: rgb(5, 1, 26); /* Matching background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Main Footer Container */
+.footer {
+  background-color: #0d0b20;
+  padding: 40px 20px 20px; /* Adjust padding to ensure space at top/bottom */
   position: relative;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent any overflow issues */
 }
 
-.footerContent {
+/* Content Container */
+.container {
   display: flex;
-  width: 100%;
   justify-content: space-between;
-  border-top: 1px solid #FFFFFF;
-  padding-top: 20px;
+  flex-wrap: wrap;
+  gap: 40px; /* Spacing between columns */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.contactSection {
+/* Individual Column */
+.column {
   flex: 1;
-  color: white;
+  min-width: 180px; /* Ensures columns adjust properly on smaller screens */
 }
 
-.footerHeading {
-  font-size: 1.2rem;
+/* Heading */
+.heading {
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
-  color: white;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
-.footerItem {
-  font-size: 1rem;
+/* Text Item */
+.item {
+  font-size: 14px;
   line-height: 1.8;
-  color: white;
+  margin: 5px 0;
+  color: #cccccc;
 }
 
+/* Icons in Contact Section */
 .icon {
   margin-right: 10px;
+  color: #a070ff;
+  font-size: 16px;
 }
 
-.linksSection {
-  flex: 2;
-  display: flex;
-  justify-content: space-between;
+/* Triangle Decoration */
+.triangle {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #ffffff;
 }
 
-.column {
-  color: white;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .column {
+    text-align: center;
+  }
 }
 
-.footerLink {
-  font-size: 1rem;
-  line-height: 2;
-  color: white;
-  cursor: pointer;
+@media screen and (max-width: 480px) {
+  .item {
+    font-size: 12px;
+  }
+  .heading {
+    font-size: 16px;
+  }
 }
