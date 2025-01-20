@@ -1,114 +1,21 @@
-/* global.css */
-
-/* Import Tailwind's base, components, and utilities */
+/* Tailwind CSS Base */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 1. Custom Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Global Styles */
 body {
-  background-color: rgb(24, 24, 27); /* Set a dark background */
-  color:black; /* Ensure text color is light for dark background */
+  background: rgba(3, 7, 28, 1); 
+  margin: 0;
   font-family: 'Arial', sans-serif;
-  font-size: 1rem; /* Base font size */
-  line-height: 1.5; /* Set line height */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  min-width: 320px; /* Ensure minimum width to avoid content getting squished */
+}/* Tailwind CSS Base */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles */
+body {
+  background-color: #03071c; 
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
-
-/* 2. Container Class */
-.container {
-  width: 100%;
-  max-width: 1200px;  /* Limit max-width on larger screens */
-  margin: 0 auto;  /* Center the container */
-  padding: 20px;    /* Add padding */
-}
-
-/* 3. Navbar */
-.navbar {
-  @apply flex justify-between items-center p-5 bg-gray-800; /* Tailwind utilities for navbar */
-}
-
-.navbar .menu {
-  @apply flex gap-5; /* Tailwind utilities for menu items */
-}
-
-/* 4. Header Section */
-.header {
-  @apply text-center py-10 px-5; /* Tailwind utilities for header */
-}
-
-.header img {
-  @apply w-full h-auto max-w-full; /* Make images responsive */
-}
-
-/* 5. About Us and Services Sections */
-.about-us,
-.services {
-  @apply flex justify-between gap-5 mb-10; /* Flexbox for layout */
-}
-
-.about-us .text,
-.services .service {
-  @apply w-2/5; /* Set width for text and service sections */
-}
-
-/* 6. Responsive Design - Media Queries */
-
-/* For screens 768px and smaller (tablets and phones) */
-@media screen and (max-width: 768px) {
-  /* Stack sections vertically */
-  .about-us,
-  .services {
-    @apply flex-col items-center;
-  }
-
-  .about-us .text,
-  .services .service {
-    @apply w-full mb-5; /* Full width for smaller screens */
-  }
-
-  /* Navbar - Stack menu items vertically */
-  .navbar {
-    @apply flex-col items-center;
-  }
-
-  .navbar .menu {
-    @apply flex-col gap-3;
-  }
-
-  /* Header Section */
-  .header {
-    @apply py-6 px-4;
-  }
-
-  .header img {
-    @apply max-w-full; /* Ensure images are responsive */
-  }
-}
-
-/* For very small screens (less than 480px) */
-@media screen and (max-width: 480px) {
-  body {
-    @apply text-sm; /* Slightly reduce font size on very small screens */
-  }
-
-  .navbar .menu a,
-  .navbar button {
-    @apply py-3 px-5; /* Larger padding for touch targets */
-  }
-}
-
-/* Ensure no content is cut off at the edges */
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;  /* Prevent horizontal overflow */
-}
-
