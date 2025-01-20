@@ -6,6 +6,8 @@
   color: white;
   font-family: Arial, sans-serif;
   overflow: hidden; /* Prevent any overflow issues */
+  margin-top: 20px;
+  
 }
 
 /* Content Container */

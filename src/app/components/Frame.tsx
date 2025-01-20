@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Frame.module.css';
 
+
 const Frame = () => {
   return (
     <div className={styles.frameContainer}>
@@ -10,7 +11,7 @@ const Frame = () => {
           <img 
             src="/0dadda15819562ae90af3be3b9daefba.png" 
             alt="Zenoheal Image" 
-            className={styles.aboutImage}
+            className={styles.aboutImage} 
           />
         </div>
         <div className={styles.aboutTextContainer}>
@@ -24,6 +25,13 @@ const Frame = () => {
           <button className={styles.learnMoreButton}>Learn More</button>
         </div>
       </section>
+
+   
+
+    
+
+      
+      
     </div>
   );
 };

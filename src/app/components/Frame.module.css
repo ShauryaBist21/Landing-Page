@@ -1,7 +1,7 @@
 .frameContainer {
   width: 100%;
   max-width: 1524px;
-  margin: 0 px;
+  margin: 0 auto; /* Center the container horizontally */
   padding: 0 2rem;
   background: rgba(3, 7, 28, 1);
   display: flex;
@@ -9,43 +9,43 @@
   align-items: center;
 }
 
-
 .aboutSection {
-  margin-top: 80px ;
+  margin-top: 80px;
   margin-left: 0px;
-  text-align: center;
+  text-align: left; /* Align text to the left */
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 30px;
+  align-items: flex-start; /* Align items vertically at the top */
+  justify-content: flex-start; /* Align items horizontally to the left */
+  gap: 30px; /* Space between image and text */
 }
 
 .aboutImageContainer {
   margin-left: 0px;
   flex-shrink: 0;
-
-
 }
 
 .aboutImage {
-  width: 250px;  /* Adjust the width as needed */
+  width: 250px; /* Adjust the width as needed */
   height: auto;
-  border-radius: 10px;  /* Optional: for rounded corners */
+  border-radius: 10px; /* Optional: for rounded corners */
 }
 
 .aboutTextContainer {
   max-width: 800px;
-} 
+  justify-content: flex-start; /* Align content to the start */
+  text-align: left; /* Align text to the left */
+}
+
 .aboutTitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #9A7BFF;
+  color: #9a7bff;
   text-transform: uppercase;
 }
 
 .aboutHeading {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: white;
   margin-bottom: 2rem; /* Increased bottom margin for spacing */
@@ -54,14 +54,14 @@
 .aboutText {
   font-size: 1rem;
   line-height: 1.8;
-  color: #EAEAEA;
+  color: #eaeaea;
   margin-bottom: 2rem; /* Added bottom margin for better spacing */
 }
 
 .learnMoreButton {
   margin-top: 2rem;
   padding: 1rem 2.5rem;
-  background-color: #0A0A23;
+  background-color: #0a0a23;
   color: white;
   font-weight: bold;
   border: none;
@@ -72,13 +72,13 @@
 }
 
 .learnMoreButton:hover {
-  background-color: #1A1A5E;
+  background-color: #1a1a5e;
 }
 
 .sectionTitle {
   font-size: 2rem;
   font-weight: bold;
-  color: #9A7BFF;
+  color: #9a7bff;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 1.5rem;
@@ -116,7 +116,7 @@
 
 .cardSubtitle {
   font-size: 1rem;
-  color: #CCCCCC;
+  color: #cccccc;
   margin-top: 1rem; /* Added margin for better spacing in cards */
 }
 
@@ -124,36 +124,22 @@
   margin-bottom: 5rem; /* Extra spacing between major sections */
 }
 
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .aboutSection {
-    margin: 40px 0;
-    padding: 0 1rem;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align text to the left */
+    text-align: left; /* Ensure text remains left-aligned */
+    gap: 20px; /* Reduce gap on smaller screens */
+  }
+
+  .aboutImage {
+    width: 150px; /* Smaller image size for mobile */
   }
 
   .servicesContainer,
   .portfolioContainer,
   .differentiatorsContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-}
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .aboutSection {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .aboutImage {
-    width: 150px;
-  }
-
-  .servicesContainer {
     flex-direction: column;
     align-items: center;
   }

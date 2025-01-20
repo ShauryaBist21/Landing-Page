@@ -8,6 +8,10 @@
     color: white;
     gap: 20px;
     flex-wrap: wrap; /* Ensures responsiveness */
+    margin-left: 70px;
+    margin-right:70px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   /* Left Section: Text */
@@ -25,7 +29,7 @@
   }
   
   .sectionSubtitle {
-    font-size: 28px;
+    font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 20px;
     line-height: 1.4;
