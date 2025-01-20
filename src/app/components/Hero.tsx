@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
           Grow smarter, grow faster as we need Solutions at the right place and at Zenoheal we are empowering all your digital twin needs
         </p>
         <div className={styles.buttonContainer}>
-          <a href="#get-started" className={styles.button}>Get Started</a>
+          <a href="#get-started" className={styles.button}>Get Started    →</a>
         </div>
       </div>
     </section>

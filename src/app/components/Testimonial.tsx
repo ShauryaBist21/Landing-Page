@@ -1,34 +1,54 @@
-import React from 'react';
-import styles from './Testimonial.module.css';
+import React from "react";
+import styles from "./Testimonial.module.css";
+import { FaUserCircle } from "react-icons/fa";
 
-const Testimonial = () => {
+const Testimonial: React.FC = () => {
   return (
     <div className={styles.testimonialContainer}>
-      <h3 className={styles.testimonialTitle}>TESTIMONIALS</h3>
-      <h1 className={styles.testimonialHeading}>Let's Read User Reviews</h1>
-      <p className={styles.testimonialSubheading}>Your opinion is very important to us!</p>
-      
-      <div className={styles.reviewContainer}>
-        <div className={styles.reviewCard}>
-          <div className={styles.profilePic}></div>
-          <h2 className={styles.userName}>Rahul Singh</h2>
-          <p className={styles.userTitle}>Freelancer</p>
-          <p className={styles.reviewText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      {/* Header Section */}
+      <div className={styles.headerSection}>
+        <h3 className={styles.title}>TESTIMONIALS</h3>
+        <h2 className={styles.subtitle}>
+          Let's Read User Reviews <br />
+          <span>Your opinion is very important to us!</span>
+        </h2>
+      </div>
+
+      {/* Testimonial Cards */}
+      <div className={styles.cardsContainer}>
+        <div className={styles.card}>
+          <div className={styles.imageContainer}>
+            <FaUserCircle className={styles.userIcon} />
+          </div>
+          <h3 className={styles.userName}>Rahul Singh</h3>
+          <p className={styles.userRole}>Freelancer</p>
+          <p className={styles.userFeedback}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
           </p>
         </div>
-
-        <div className={styles.reviewCard}>
-          <div className={styles.profilePic + ' ' + styles.secondPic}></div>
-          <h2 className={styles.userName}>John Doe</h2>
-          <p className={styles.userTitle}>Developer</p>
-          <p className={styles.reviewText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <div className={styles.card}>
+          <div className={styles.imageContainer}>
+            <FaUserCircle className={styles.userIcon} />
+          </div>
+          <h3 className={styles.userName}>Jane Doe</h3>
+          <p className={styles.userRole}>Content Creator</p>
+          <p className={styles.userFeedback}>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
           </p>
         </div>
       </div>
 
-      <p className={styles.scrollText}>Drag to scroll & view more</p>
+      {/* Scrolling Instruction */}
+      <div className={styles.scrollInstruction}>
+        <span className={styles.scrollText}>DRAG TO SCROLL & VIEW MORE</span>
+        <span className={styles.scrollArrow}>➔</span>
+      </div>
     </div>
   );
 };
