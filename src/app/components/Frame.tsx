@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './Frame.module.css';
 
-
 const Frame = () => {
   return (
     <div className={styles.frameContainer}>
@@ -26,12 +25,18 @@ const Frame = () => {
         </div>
       </section>
 
-   
+      {/* Additional Sections */}
+      <section className={styles.servicesContainer}>
+        {/* Cards for services */}
+      </section>
 
-    
+      <section className={styles.portfolioContainer}>
+        {/* Portfolio Items */}
+      </section>
 
-      
-      
+      <section className={styles.differentiatorsContainer}>
+        {/* Differentiators */}
+      </section>
     </div>
   );
 };

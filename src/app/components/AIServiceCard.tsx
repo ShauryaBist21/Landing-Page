@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"; 
 import styles from "./AIServiceCard.module.css";
 import { FaChartBar, FaTools, FaBullhorn } from "react-icons/fa";
 
