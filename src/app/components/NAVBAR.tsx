@@ -1,36 +1,107 @@
-'use client';  // Add this line to make the component a client-side component
+/* Default Navbar Styling */
+.navbar {
+  top: 67px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  padding: 0 1rem;
+  border-radius: 30px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: transparent; /* Keep navbar background transparent */
+}
 
-import React, { useState } from 'react';
-import styles from './NavBar.module.css';
+.logo {
+  font-size: 2rem;
+  color: #6e38f5;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
 
-const NavBar: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+.navLinks {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: hsl(0, 0%, 50%); /* Keep gray background for nav links */
+  width: 100%;
+  max-width: 1250px;
+  height: 56px;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  border-radius: 30px;
+}
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+.navLinks li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
 
-  return (
-    <nav className={`${styles.navbar} ${menuOpen ? styles.active : ''}`}>
-      <div className={styles.logo}>
-        <span>&#x27A4;</span> {/* Arrow symbol logo */}
-      </div>
-      <div className={styles.hamburger} onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ''}`}>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#products">Products</a></li>
-      </ul>
-      <div className={styles.contactUs}>
-        <a href="#contact">Contact Us</a>
-      </div>
-    </nav>
-  );
-};
+.navLinks li a:hover {
+  opacity: 0.8;
+}
 
-export default NavBar;
+.contactUs a {
+  padding: 0.5rem 1.5rem;
+  background-color: #9c47ff; /* Purple background for contact button */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.contactUs a:hover {
+  background-color: #6e38f5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 1rem;
+    background-color: hsl(0, 0%, 50%); /* Ensure consistent background for mobile */
+    width: 100%;
+    padding: 1rem;
+    display: flex; /* Ensure the links are shown */
+    align-items: center; /* Center align the nav items */
+    border-radius: 30px;
+  }
+
+  .contactUs {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  /* Hide the hamburger icon on mobile view */
+  .hamburger {
+    display: none; /* Optional: Hide hamburger if the full navbar is shown */
+  }
+}
+
+@media (max-width: 480px) {
+  .navLinks {
+    display: flex; /* Force to display all links */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar.active .navLinks {
+    display: flex; /* Keep nav visible when active */
+  }
+
+  .hamburger {
+    display: none; /* Optional: Keep hamburger hidden if we want full navbar */
+  }
+}
