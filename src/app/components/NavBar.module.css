@@ -12,6 +12,7 @@
   margin-top: 20px;
   margin-bottom: 20px;
   background-color: transparent;
+  position: relative; /* Important for positioning child elements */
 }
 
 .logo {
@@ -60,6 +61,37 @@
   background-color: #6e38f5;
 }
 
+/* Hamburger Menu Styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.navLinks.showMenu {
+  display: flex; /* Show menu on click */
+  flex-direction: column; /* Stack the links vertically */
+  align-items: center;
+  background-color: hsl(0, 0%, 50%);
+  padding: 1rem;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.navLinks {
+  display: flex; /* Default flex for desktop */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar {
@@ -68,6 +100,11 @@
     padding: 5px 1rem;
     height: auto; /* Adjusted height for mobile */
     margin-top: 10px; /* Adjusted margin */
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Smaller logo for mobile */
+    margin-bottom: 10px;
   }
 
   .navLinks {
@@ -86,6 +123,15 @@
     text-align: center;
     width: 100%;
   }
+
+  /* Show hamburger menu on smaller screens */
+  .hamburger {
+    display: block;
+  }
+
+  .navbar.active .navLinks {
+    display: flex; /* Keep nav visible when active */
+  }
 }
 
 @media (max-width: 480px) {
@@ -102,6 +148,6 @@
   }
 
   .hamburger {
-    display: block; /* Ensure hamburger is visible */
+    display: block; /* Optional: Show hamburger icon */
   }
 }
