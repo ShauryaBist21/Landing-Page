@@ -16,6 +16,7 @@
   display: flex;
   gap: 20px;
   order: 2; /* Ensure the cards come after the heading in mobile view */
+  flex-wrap: wrap; /* Allow the cards to wrap */
 }
 
 .card {
@@ -29,6 +30,7 @@
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
 }
 
 .card:hover {
@@ -94,6 +96,7 @@
   justify-content: center;
   gap: 8px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: center; /* Center the button */
 }
 
 .learnMoreButton:hover {
@@ -114,19 +117,24 @@
     margin-right: 20px;
   }
 
+  /* Text Section */
   .textSection {
     text-align: center;
     margin-bottom: 30px;
   }
 
+  /* Cards Section */
   .cardsSection {
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    flex-direction: column;
   }
 
   .card {
-    width: 180px;
+    width: 100%; /* Full width for cards in mobile */
+    max-width: 300px;
     padding: 15px;
+    margin-bottom: 20px; /* Spacing between cards */
   }
 
   .learnMoreButton {
@@ -147,7 +155,8 @@
   }
 
   .card {
-    width: 160px;
+    width: 100%; /* Full width on very small devices */
+    max-width: 200px;
     padding: 10px;
   }
 
