@@ -71,11 +71,10 @@
   }
 
   .navLinks {
-    flex-direction: column;
-    gap: 1.5rem; /* Increased gap for better spacing */
-    background-color: hsl(0, 0%, 50%); /* Keep gray background */
-    width: 100%;
-    padding: 0.5rem;
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem; /* Ensure adequate spacing between links */
+    padding: 1rem; /* Add padding for better appearance */
+    width: 100%; /* Ensure full width */
     display: flex; /* Ensure links are shown */
     align-items: center; /* Center align items */
     border-radius: 30px;
