@@ -15,6 +15,7 @@
 .cardsSection {
   display: flex;
   gap: 20px;
+  order: 2; /* Ensure the cards come after the heading in mobile view */
 }
 
 .card {
@@ -51,6 +52,7 @@
 .textSection {
   max-width: 500px;
   text-align: left;
+  order: 1; /* Ensure the heading comes first in mobile view */
 }
 
 .sectionTitle {
@@ -103,67 +105,57 @@
   font-size: 20px;
 }
 
-/* Desktop View */
-@media (min-width: 769px) {
-  .portfolioContainer {
-    flex-direction: row; /* Left-right on desktop */
-  }
-
-  .textSection {
-    text-align: left;
-  }
-
-  .cardsSection {
-    justify-content: flex-start;
-  }
-}
-
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .portfolioContainer {
-    flex-direction: column; /* Stack text and cards vertically in mobile */
+    flex-direction: column; /* Stack the elements vertically */
     padding: 30px 10px;
     margin-left: 20px;
     margin-right: 20px;
-    text-align: center; /* Center the text */
   }
 
-  /* Left Section: Text */
   .textSection {
-    width: 100%; /* Ensure text section takes full width */
-    margin-bottom: 20px; /* Add space between text section and cards */
+    text-align: center;
+    margin-bottom: 30px;
   }
 
-  /* Left Section: Cards */
   .cardsSection {
-    display: flex;
-    flex-direction: column; /* Stack cards vertically */
-    gap: 20px;
-    align-items: center; /* Center the cards */
+    justify-content: center;
+    gap: 10px;
   }
 
   .card {
-    width: 100%; /* Make cards take full width */
-    max-width: 300px; /* Limit the max width for cards */
+    width: 180px;
     padding: 15px;
-    margin: 0 auto; /* Center the cards */
   }
 
-  /* Learn More Button */
   .learnMoreButton {
     font-size: 14px;
-    padding: 12px 20px;
-    align-self: center; /* Center the button */
-    margin-top: 20px; /* Space above the button */
+    padding: 10px 15px;
   }
 }
 
 /* Very Small Devices (e.g., mobile phones) */
 @media (max-width: 480px) {
+  .sectionSubtitle {
+    font-size: 1.5rem;
+  }
+
   .learnMoreButton {
     font-size: 12px;
     padding: 8px 12px;
-    align-self: center; /* Center the button */
-    margin-top: 15px; /* Space above the button */
+  }
+
+  .card {
+    width: 160px;
+    padding: 10px;
+  }
+
+  .cardIcon {
+    font-size: 40px;
+  }
+
+  .sectionDescription {
+    font-size: 12px;
   }
 }
