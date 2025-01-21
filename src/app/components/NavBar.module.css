@@ -11,7 +11,7 @@
   box-sizing: border-box;
   margin-top: 20px;
   margin-bottom: 20px;
-  background-color: transparent; /* Keep navbar background transparent */
+  background-color: transparent;
 }
 
 .logo {
@@ -25,7 +25,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: hsl(0, 0%, 50%); /* Keep gray background for nav links */
+  background-color: hsl(0, 0%, 50%); /* Gray background */
   width: 100%;
   max-width: 1250px;
   height: 56px;
@@ -48,7 +48,7 @@
 
 .contactUs a {
   padding: 0.5rem 1.5rem;
-  background-color: #9c47ff; /* Purple background for contact button */
+  background-color: #9c47ff;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -65,36 +65,50 @@
   .navbar {
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding: 5px 1rem;
+    height: 50px; /* Reduced height for mobile */
+    margin-top: 10px; /* Adjusted margin */
+  }
+
+  .logo {
+    font-size: 1.5rem; /* Smaller logo for mobile */
+    margin-bottom: 5px;
   }
 
   .navLinks {
     flex-direction: column;
     gap: 1rem;
-    background-color: hsl(0, 0%, 50%); /* Ensure consistent background for mobile */
+    background-color: hsl(0, 0%, 50%); /* Keep gray background */
     width: 100%;
-    padding: 1rem;
-    display: flex; /* Ensure the links are shown */
-    align-items: center; /* Center align the nav items */
+    padding: 0.5rem;
+    display: flex; /* Ensure links are shown */
+    align-items: center; /* Center align items */
     border-radius: 30px;
   }
 
   .contactUs {
     margin-top: 1rem;
     text-align: center;
+    width: 100%;
   }
 
-  /* Hide the hamburger icon on mobile view */
+  .contactUs a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Ensure the hamburger is hidden */
   .hamburger {
-    display: none; /* Optional: Hide hamburger if the full navbar is shown */
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .navLinks {
-    display: flex; /* Force to display all links */
+    display: flex; /* Ensure links are visible */
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
   }
 
   .navbar.active .navLinks {
@@ -102,6 +116,6 @@
   }
 
   .hamburger {
-    display: none; /* Optional: Keep hamburger hidden if we want full navbar */
+    display: none; /* Optional: Hide hamburger if navbar is full */
   }
 }
