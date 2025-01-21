@@ -66,13 +66,13 @@
     flex-direction: column;
     align-items: center;
     padding: 5px 1rem;
-    height: 50px; /* Reduced height for mobile */
+    height: 60px; /* Adjusted height for mobile */
     margin-top: 10px; /* Adjusted margin */
   }
 
   .logo {
     font-size: 1.5rem; /* Smaller logo for mobile */
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .navLinks {
@@ -109,6 +109,7 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+    width: 100%; /* Ensure full width */
   }
 
   .navbar.active .navLinks {
