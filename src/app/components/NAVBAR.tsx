@@ -22,12 +22,13 @@ const NavBar: React.FC = () => {
       </div>
       <ul className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ''}`}>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
+        <li><a href="#about">About Us</a></li> {/* Correctly positioned */}
         <li><a href="#services">Services</a></li>
         <li><a href="#products">Products</a></li>
+        {/* Removed Contact Us from mobile view */}
       </ul>
       <div className={styles.contactUs}>
-        <a href="#contact">Contact Us</a>
+        <a href="#contact">Contact Us</a> {/* Placed outside the mobile menu */}
       </div>
     </nav>
   );
