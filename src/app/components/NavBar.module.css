@@ -1,3 +1,4 @@
+/* Default Navbar Styling */
 .navbar {
   top: 67px;
   display: flex;
@@ -10,6 +11,7 @@
   box-sizing: border-box;
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: transparent; /* Keep navbar background transparent */
 }
 
 .logo {
@@ -23,7 +25,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: hsl(0, 0%, 50%); /* Gray background restored */
+  background-color: hsl(0, 0%, 50%); /* Keep gray background for nav links */
   width: 100%;
   max-width: 1250px;
   height: 56px;
@@ -46,7 +48,7 @@
 
 .contactUs a {
   padding: 0.5rem 1.5rem;
-  background-color: #9c47ff;
+  background-color: #9c47ff; /* Purple background for contact button */
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -62,7 +64,8 @@
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: 10px;
   }
 
   .navLinks {
@@ -71,32 +74,34 @@
     background-color: hsl(0, 0%, 50%); /* Ensure consistent background for mobile */
     width: 100%;
     padding: 1rem;
+    display: flex; /* Ensure the links are shown */
+    align-items: center; /* Center align the nav items */
+    border-radius: 30px;
   }
 
   .contactUs {
     margin-top: 1rem;
+    text-align: center;
+  }
+
+  /* Hide the hamburger icon on mobile view */
+  .hamburger {
+    display: none; /* Optional: Hide hamburger if the full navbar is shown */
   }
 }
 
 @media (max-width: 480px) {
   .navLinks {
-    display: none;
+    display: flex; /* Force to display all links */
+    flex-direction: column;
+    align-items: center;
   }
 
   .navbar.active .navLinks {
-    display: flex;
+    display: flex; /* Keep nav visible when active */
   }
 
   .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 4px 0;
-    background-color: #6e38f5;
+    display: none; /* Optional: Keep hamburger hidden if we want full navbar */
   }
 }
