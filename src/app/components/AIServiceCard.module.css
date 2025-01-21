@@ -144,8 +144,10 @@
   }
 
   .learnMoreButton {
-      font-size: 14px;
-      padding: 10px 15px;
+    font-size: 14px;
+    padding: 10px 15px;
+    align-self: center; /* Center the button horizontally */
+    margin-top: 20px; /* Add space above the button */
   }
 }
 
