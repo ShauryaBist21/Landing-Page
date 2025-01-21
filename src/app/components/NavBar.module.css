@@ -70,11 +70,6 @@
     margin-top: 10px; /* Adjusted margin */
   }
 
-  .logo {
-    font-size: 1.5rem; /* Smaller logo for mobile */
-    margin-bottom: 10px;
-  }
-
   .navLinks {
     flex-direction: column;
     gap: 1.5rem; /* Increased gap for better spacing */
@@ -87,18 +82,9 @@
   }
 
   .contactUs {
-    margin-top: 1rem;
+    margin-top: 1rem; /* Ensure spacing from nav links */
     text-align: center;
     width: 100%;
-  }
-
-  .contactUs a {
-    width: 100%;
-    text-align: center;
-  }
-
-  .hamburger {
-    display: block; /* Ensure hamburger is visible */
   }
 }
 
