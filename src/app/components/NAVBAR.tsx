@@ -1,4 +1,4 @@
-'use client'; // Make sure this is included for client-side rendering
+'use client';
 
 import React, { useState } from 'react';
 import styles from './NavBar.module.css'; // Import the CSS module
@@ -11,24 +11,29 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className={`${styles.navbar} ${menuOpen ? styles.active : ''}`}>
+    <nav className={styles.navbar}>
       <div className={styles.logo}>
         <span>&#x27A4;</span> {/* Arrow symbol logo */}
       </div>
+
+      {/* Hamburger icon for mobile */}
       <div className={styles.hamburger} onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
       </div>
+
+      {/* Navigation links */}
       <ul className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ''}`}>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li> {/* Correctly positioned */}
+        <li><a href="#about">About Us</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#products">Products</a></li>
-        {/* Removed Contact Us from mobile view */}
       </ul>
+
+      {/* Contact Us button, outside the mobile menu */}
       <div className={styles.contactUs}>
-        <a href="#contact">Contact Us</a> {/* Placed outside the mobile menu */}
+        <a href="#contact">Contact Us</a>
       </div>
     </nav>
   );
