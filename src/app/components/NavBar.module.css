@@ -1,107 +1,126 @@
-/* Default Navbar Styling */
+/* General Navbar Styles */
 .navbar {
-  top: 67px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: hsl(0, 0%, 50%); /* Gray background */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 56px;
-  padding: 0 1rem;
-  border-radius: 30px;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
   box-sizing: border-box;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  background-color: transparent;
 }
 
+/* Logo */
 .logo {
-  font-size: 2rem;
-  color: #6e38f5;
-  display: inline-block;
-  transform: rotate(-45deg);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Navbar Links */
 .navLinks {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-  background-color: hsl(0, 0%, 50%); /* Gray background */
-  width: 100%;
-  max-width: 1250px;
-  height: 56px;
-  gap: 2rem; /* Increased gap for better spacing */
   list-style: none;
-  padding: 0;
-  border-radius: 30px;
+  gap: 2rem;
+}
+
+.navLinks li {
+  margin: 0;
 }
 
 .navLinks li a {
   text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
   color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s ease;
 }
 
 .navLinks li a:hover {
-  opacity: 0.8;
+  color: #cfcfcf;
 }
 
+/* Contact Us Button */
 .contactUs a {
-  padding: 0.5rem 1.5rem;
-  background-color: #9c47ff;
+  padding: 0.5rem 1rem;
+  background-color: #6e38f5;
   color: white;
   text-decoration: none;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .contactUs a:hover {
-  background-color: #6e38f5;
+  background-color: #4c27a0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 5px 1rem;
-    height: auto; /* Adjusted height for mobile */
-    margin-top: 10px; /* Adjusted margin */
+  .hamburger {
+    display: flex;
   }
 
   .navLinks {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
     flex-direction: column;
-    gap: 1.5rem; /* Increased gap for better spacing */
-    background-color: hsl(0, 0%, 50%); /* Keep gray background */
     width: 100%;
-    padding: 0.5rem;
-    display: flex; /* Ensure links are shown */
-    align-items: center; /* Center align items */
-    border-radius: 30px;
+    background-color: hsl(0, 0%, 50%);
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    gap: 1rem;
+  }
+
+  .navLinks.showMenu {
+    display: flex;
   }
 
   .contactUs {
-    margin-top: 1rem; /* Ensure spacing from nav links */
     text-align: center;
-    width: 100%;
   }
 }
 
-@media (max-width: 480px) {
-  .navLinks {
-    display: flex; /* Ensure links are visible */
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    width: 100%; /* Ensure full width */
-  }
-
-  .navbar.active .navLinks {
-    display: flex; /* Keep nav visible when active */
-  }
-
-  .hamburger {
-    display: block; /* Ensure hamburger is visible */
-  }
+/* Hamburger Animation */
+.navbar.active .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
 }
+
+.navbar.active .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar.active .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+/* Adjust the logo image size */
+.logoImage {
+  width: 120px; /* Increase the width to make it larger */
+  height: 120px; /* Set the height to maintain aspect ratio */
+  object-fit: contain; /* Ensure the image isn't distorted */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
