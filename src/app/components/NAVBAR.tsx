@@ -1,9 +1,9 @@
-'use client'; // Make sure this is included for client-side rendering
+"use client";
 
-import React, { useState } from 'react';
-import styles from './NavBar.module.css'; // Import the CSS module
+import styles from "./NavBar.module.css";
+import { useState } from "react";
 
-const NavBar: React.FC = () => {
+export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,27 +11,40 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <nav className={`${styles.navbar} ${menuOpen ? styles.active : ''}`}>
+    <nav className={styles.navbar}>
+      {/* Replace the logo text with the image */}
       <div className={styles.logo}>
-        <span>&#x27A4;</span> {/* Arrow symbol logo */}
+        <img
+          src="/Zenoheal photo.jpeg"
+          alt="Zenoheal Logo"
+          className={styles.logoImage}
+        />
       </div>
+
       <div className={styles.hamburger} onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <ul className={`${styles.navLinks} ${menuOpen ? styles.showMenu : ''}`}>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li> {/* Correctly positioned */}
-        <li><a href="#services">Services</a></li>
-        <li><a href="#products">Products</a></li>
-        {/* Removed Contact Us from mobile view */}
+
+      <ul
+        className={`${styles.navLinks} ${
+          menuOpen ? styles.showMenu : ""
+        }`}
+      >
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#about">About</a>
+        </li>
+        <li>
+          <a href="#services">Services</a>
+        </li>
+        <li className={styles.contactUs}>
+          <a href="#contact">Contact Us</a>
+        </li>
       </ul>
-      <div className={styles.contactUs}>
-        <a href="#contact">Contact Us</a> {/* Placed outside the mobile menu */}
-      </div>
     </nav>
   );
-};
-
-export default NavBar;
+}
